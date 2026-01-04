@@ -119,6 +119,13 @@ solr-precreate gettingstarted
 ```bash
 ```
 
+*NB: Running Solr on docker requires permission on the files. For that you need to grant READ/WRTIE/EXECUTE permission to data folder*
+
+```bash
+chmod -R o+rwx data
+```
+ 
+
 ## Index Data
 
 Could be achieved in multiple ways. Assuming we want to index some data on techproducts
