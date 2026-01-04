@@ -1,0 +1,17 @@
+services:
+  solr:
+    image: solr:9
+    hostname: solr
+    ports:
+      - "8983:8983"
+    networks: [solr]
+    user: 8983:8983:8983
+    command:
+      - solr-precreate
+      - gettingstarted
+    volumes:
+      - ./runtime/data:/var/solr
+
+networks:
+  solr:
+    driver: bridge
